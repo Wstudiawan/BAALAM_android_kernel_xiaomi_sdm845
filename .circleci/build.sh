@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
-git clone --depth=1 https://github.com/sohamxda7/llvm-stable  clang
+git clone --depth=1 https://github.com/Wstudiawan/xRageTC-clang clang
 git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
 git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
 git clone --depth=1 https://github.com/Wstudiawan/AnyKernel3-1.git AnyKernel
@@ -26,7 +26,7 @@ function sendinfo() {
         -d chat_id="-1001421078455" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
-        -d text="<b>• WS Kernel •</b>%0ABuild started on <code>Circle CI</code>%0AFor device <b>Xiaomi Pocophone F1</b> (beryllium)%0Abranch <code>$(git rev-parse --abbrev-ref HEAD)</code>(master)%0AUnder commit <code>$(git log --pretty=format:'"%h : %s"' -1)</code>%0AUsing compiler: <code>${KBUILD_COMPILER_STRING}</code>%0AStarted on <code>$(date)</code>%0A<b>Build Status:</b>#Stable"
+        -d text="<b>• Parak Karakah Kernel •</b>%0ABuild started on <code>Circle CI</code>%0AFor device <b>Xiaomi Pocophone F1</b> (beryllium)%0Abranch <code>$(git rev-parse --abbrev-ref HEAD)</code>(master)%0AUnder commit <code>$(git log --pretty=format:'"%h : %s"' -1)</code>%0AUsing compiler: <code>${KBUILD_COMPILER_STRING}</code>%0AStarted on <code>$(date)</code>%0A<b>Build Status:</b>#Stable"
 }
 # Push kernel to channel
 function push() {
@@ -49,7 +49,7 @@ function finerr() {
 }
 # Compile plox
 function compile() {
-    make O=out ARCH=arm64 beryllium_user_defconfig
+    make O=out ARCH=arm64 beryllium_defconfig
     make -j$(nproc --all) O=out \
                     ARCH=arm64 \
                     CC=clang \
@@ -66,7 +66,7 @@ function compile() {
 # Zipping
 function zipping() {
     cd AnyKernel || exit 1
-    zip -r9 NgaraiSianok-${TANGGAL}.zip *
+    zip -r9 ParakKarakah-${TANGGAL}.zip *
     cd ..
 }
 sticker
