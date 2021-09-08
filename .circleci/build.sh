@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
 git clone -j8 https://github.com/z4nyx/linaro-gcc-elf -b latest-7 --depth=1 gcc
-git clone -j8 https://github.com/z4nyx/AnyKernel3.git -b rolex --depth=1 AnyKernel
+git clone -j8 --depth=1 https://github.com/Wstudiawan/AnyKernel3-1.git AnyKernel
 echo "Done"
 GCC="$(pwd)/gcc/bin/aarch64-elf-"
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
