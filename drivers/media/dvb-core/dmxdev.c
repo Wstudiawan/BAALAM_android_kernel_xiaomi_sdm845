@@ -4839,7 +4839,7 @@ int dvb_dmxdev_init(struct dmxdev *dmxdev, struct dvb_adapter *dvb_adapter)
 	int i;
 	struct dmx_caps caps;
 
-	int i, ret;
+	
 
 
 	if (dmxdev->demux->open(dmxdev->demux) < 0)
