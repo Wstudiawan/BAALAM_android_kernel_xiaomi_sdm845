@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
-git clone --depth=1 https://github.com/Wstudiawan/Parak_Karakah_android_kernel_xiaomi_sdm845 -b new14caf  kernel
-cd kernel
+git clone --depth=1 https://github.com/Wstudiawan/Parak_Karakah_android_kernel_xiaomi_sdm845 -b new14caf beryllium
+cd beryllium
 git clone https://github.com/arter97/arm64-gcc --depth=1
 git clone https://github.com/arter97/arm32-gcc --depth=1
 git clone --depth=1 https://github.com/sohamxda7/AnyKernel3 AnyKernel
