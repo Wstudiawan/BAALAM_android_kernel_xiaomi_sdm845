@@ -14,7 +14,7 @@ MODEL=Xiaomi
 DEVICE=Beryllium
 
 # Kernel Version Code
-VERSION=X1
+VERSION=Stable
 
 # Kernel Defconfig
 DEFCONFIG=beryllium_defconfig
@@ -39,12 +39,12 @@ DATE=$(TZ=Asia/Kolkata date +"%Y%m%d-%T")
 TANGGAL=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=Nexus
+ZIPNAME=Beryllium
 FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-${DRONE_BUILD_NUMBER}.zip
 
 ##----------------------------------------------------------##
 # Specify compiler ( azure , eva gcc , aosp , neutron & proton )
-COMPILER=azure
+COMPILER=eva
 
 ##----------------------------------------------------------##
 # Specify Linker
