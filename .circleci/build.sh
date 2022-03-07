@@ -35,16 +35,16 @@ KERVER=$(make kernelversion)
 COMMIT_HEAD=$(git log --oneline -1)
 
 # Date and Time
-DATE=$(TZ=Asia/Kolkata date +"%Y%m%d-%T")
+DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 TANGGAL=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=Beryllium
+ZIPNAME=Parak-Karakah
 FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-${DRONE_BUILD_NUMBER}.zip
 
 ##----------------------------------------------------------##
 # Specify compiler ( azure , eva gcc , aosp , neutron & proton )
-COMPILER=proton
+COMPILER=aosp
 
 ##----------------------------------------------------------##
 # Specify Linker
